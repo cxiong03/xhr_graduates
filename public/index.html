@@ -8,15 +8,18 @@
 </head>
 <body>
     <h2>Create Your Profile!</h2>
-    
-    <input id="firstName"/>
-    <input id="lastName"/>
-    <input id="email"/>
+    <form>
+    <label>First Name: </label><input type ="text" id="firstName" required/><br>
+    <label>Last Name: </label><input type ="text" id="lastName" required/><br>
+    <label>Email: </label><input type = "email" id="email" required/><br>
+    </form>
 
-    <button type="submit" id='post-btn'></button>
+    <button type="submit" id='post-btn'>Enter</button>
 
     <h2>Show Graduates Profile</h2>
-    <button type="submit">Request</button>
+    <form>
+    <button type="submit" id="get-btn">Request</button>
+    </form>
 
 </body>
 </html>
