@@ -15,12 +15,14 @@
     <label>Email: </label><input type = "email" id="email" required/><br>
     </form>
 
-    <button type="submit" id='post-btn'>Enter</button>
+    <button type="submit" id='post-btn' onclick="createNewGraduate" value='submit'>Enter</button>
 
     <h2>Show Graduates Profile</h2>
-    <form>
-    <button type="submit" id="get-btn">Request</button>
-    </form>
+    
+    <button type="submit" id="get-btn" onclick="getAllGraduates" value='submit'>Request</button>
+
+    <div id="results"></div>
+
 
 <script src="script.js"></script>
 </body>

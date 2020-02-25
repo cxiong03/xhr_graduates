@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const PORT = 3000;
 
@@ -15,6 +16,7 @@ db.on('error', err => console.error(error));
 db.once('open', () => console.log( 'You are connected to your Database...' ));
 
 app.use(express.json());
+app.use(cors());
 
 const graduatesRouter = require('./routes/profile');
 
