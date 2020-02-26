@@ -35,14 +35,21 @@ const getAllGraduates = () => {
         // document.getElementById('results').innerHTML = JSON.stringify(responseData);
         const parsed = responseData;
         const result = parsed.map(element => {
-            return("<li>"+"First Name: " + element.firstName + ',' +'Last Name: ' + element.lastName + ',' + 'Email: ' + element.email + "</li>"); 
+            return(
+                // "<li>"+"First Name: " + element.firstName + ', ' + 'Last Name: ' + element.lastName + ', ' + 'Email: ' + element.email + "</li>"
+                '<tr>' + '<td>' + element.firstName + '</td>' + '<td>' + element.lastName + '</td>' + '<td>' + element.email + '</td>' + '</tr>'); 
             
             // (`<li> ${element.firstName} </li>
             // <li>${element.lastName} </li>
             // <li> ${element.email} </li>`)
         })
         // document.getElementById('results').innerHTML = result;
-        document.getElementById('results').innerHTML = "<ul>" + result.join("\n") + "</ul>"
+        // document.getElementById('results').innerHTML = "<ul>" + result.join("\n") + "</ul>"
+
+        document.getElementById('results').innerHTML =
+            '<table>' + '<tr>' + '<th>' + 'First Name' + '</th>'
+            + '<th>' + 'Last Name' + '</th>' + '<th>' + 'Email'
+            + '</th>' + '</tr>' + result.join('') + '</table>'
     });
 }
 
