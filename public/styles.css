@@ -11,5 +11,9 @@ table {
   }
   
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #FFF8DC;
+  }
+
+  #createProfileHeader {
+    color: hotpink;
   }

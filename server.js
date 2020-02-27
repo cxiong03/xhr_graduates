@@ -12,7 +12,7 @@ app.use('/', express.static('public'));
 
 const db = mongoose.connection;
 
-db.on('error', err => console.error(error));
+db.on('error', error => console.error(error));
 db.once('open', () => console.log( 'You are connected to your Database...' ));
 
 app.use(express.json());
